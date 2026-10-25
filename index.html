@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the latest in fashion, clothing, footwear, accessories, and beauty products at Myntra Clone. Enjoy discounts up to 80% with fast shipping and easy returns.">
+  <meta name="keywords" content="fashion, shopping, clothing, footwear, accessories, ethnic wear, men fashion, women fashion, Myntra clone">
+  <meta name="theme-color" content="#ff3f6c">
+  <title>Online Shopping for Women, Men, Kids Fashion & Lifestyle | Myntra Clone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M20 75 L35 25 L50 65 L65 25 L80 75' fill='none' stroke='%23ff3f6c' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+</head>
+<body>
+
+  <!-- ======================================================================
+       1. Top Announcement Bar
+       ====================================================================== -->
+  <aside class="top-announcement" aria-label="Special Offers Announcement">
+    <span>✨ GRAND FASHION SALE: Flat 50-80% OFF on Top Brands + Extra ₹400 Off on 1st Order!</span>
+    <a href="#offers" title="Claim Offer">USE CODE: MYNTRA400</a>
+  </aside>
+
+  <!-- ======================================================================
+       2. Navigation Header
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+
+        <!-- Pure CSS Mobile Menu Checkbox & Hamburger Button -->
+        <input type="checkbox" id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle navigation menu">
+        <label for="mobile-nav-toggle" class="mobile-nav-btn" aria-label="Open Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- Brand Logo -->
+        <a href="#home" class="logo-area" aria-label="Myntra Homepage">
+          <div class="logo-symbol">
+            <!-- Stylized Geometric Myntra-inspired 'M' Ribbon SVG -->
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40" aria-hidden="true">
+              <path d="M6 34 L15 10 L22 28 L29 10 L38 34" stroke="url(#logo-gradient)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="logo-gradient" x1="6" y1="10" x2="38" y2="34" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ff3f6c"/>
+                  <stop offset="0.5" stop-color="#ff905a"/>
+                  <stop offset="1" stop-color="#f43397"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <span class="logo-text">MYNTRA<span>.</span></span>
+        </a>
+
+        <!-- Desktop Navigation Links & Mobile Drawer -->
+        <nav class="nav-menu" aria-label="Primary Navigation">
+          <div class="nav-item">
+            <a href="#category-men" class="nav-link">MEN</a>
+          </div>
+          <div class="nav-item">
+            <a href="#category-women" class="nav-link">WOMEN</a>
+          </div>
+          <div class="nav-item">
+            <a href="#category-kids" class="nav-link">KIDS</a>
+          </div>
+          <div class="nav-item">
+            <a href="#trending" class="nav-link">HOME &amp; LIVING</a>
+          </div>
+          <div class="nav-item">
+            <a href="#category-beauty" class="nav-link">BEAUTY</a>
+          </div>
+          <div class="nav-item">
+            <a href="#offers" class="nav-link">STUDIO <sup class="studio-badge">NEW</sup></a>
+          </div>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="search-wrapper">
+          <form class="search-form" action="#trending" method="get" role="search">
+            <!-- Search Magnifier Icon SVG -->
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="search" 
+              name="q" 
+              class="search-input" 
+              placeholder="Search for products, brands and more" 
+              aria-label="Search for products, brands and more"
+              autocomplete="off"
+            >
+          </form>
+        </div>
+
+        <!-- User Actions (Profile, Wishlist, Bag) -->
+        <div class="user-actions">
+          <!-- Profile Action -->
+          <a href="#profile" class="action-btn" aria-label="User Profile">
+            <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span class="action-label">Profile</span>
+          </a>
+
+          <!-- Wishlist Action -->
+          <a href="#wishlist" class="action-btn" aria-label="Wishlist items">
+            <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="action-label">Wishlist</span>
+            <span class="action-badge" aria-label="3 items in wishlist">3</span>
+          </a>
+
+          <!-- Shopping Bag Action -->
+          <a href="#bag" class="action-btn" aria-label="Shopping bag">
+            <svg class="action-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="action-label">Bag</span>
+            <span class="action-badge" aria-label="2 items in bag">2</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       3. Main Content Landmark
+       ====================================================================== -->
+  <main id="home">
+
+    <!-- ==================================================================
+         Hero Promotional Banner Section
+         ================================================================== -->
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-banner">
+
+          <!-- Left Promotional Copy -->
+          <div class="hero-content">
+            <span class="hero-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              Summer Fest '26 • Exclusive Drop
+            </span>
+            <h1 id="hero-title" class="hero-headline">
+              FASHION THAT <br><span>DEFINES YOU</span>
+            </h1>
+            <p class="hero-subtitle">
+              Discover the latest trends in fashion. Elevate your daily rotation with runway-inspired silhouettes, premium designer apparel, and everyday casual essentials.
+            </p>
+            <a href="#trending" class="hero-cta-btn" id="shop-now-hero">
+              SHOP NOW
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Right Promotional Image & Floating Badge -->
+          <div class="hero-visual">
+            <img 
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80" 
+              alt="Fashion model showcasing stylish shopping outfits and trendy clothing"
+              class="hero-img"
+              loading="eager"
+            >
+            <div class="hero-floating-badge" aria-hidden="true">
+              <span class="badge-percent">80%</span>
+              <span class="badge-text">MAX DISCOUNT<br>ON TOP LABELS</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Quick Value Offer Coupons Strip -->
+        <div class="offers-strip" id="offers">
+          <div class="offer-card">
+            <div class="offer-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                <line x1="2" y1="10" x2="22" y2="10"></line>
+              </svg>
+            </div>
+            <div class="offer-text">
+              <h4>FLAT ₹400 OFF</h4>
+              <p>On your 1st order | Use: <strong>MYNTRA400</strong></p>
+            </div>
+          </div>
+
+          <div class="offer-card">
+            <div class="offer-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="offer-text">
+              <h4>FREE EXPRESS SHIPPING</h4>
+              <p>Zero delivery fee on orders above ₹799</p>
+            </div>
+          </div>
+
+          <div class="offer-card">
+            <div class="offer-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+              </svg>
+            </div>
+            <div class="offer-text">
+              <h4>14-DAY HASSLE-FREE RETURNS</h4>
+              <p>Instant doorstep pickup &amp; instant refunds</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Shop by Category Section
+         ================================================================== -->
+    <section class="section-wrapper" id="categories" aria-labelledby="category-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <h2 id="category-heading" class="section-title">SHOP BY CATEGORY</h2>
+          <p class="section-subtitle">Pick from carefully curated fashion segments for every style and season</p>
+        </header>
+
+        <div class="categories-grid">
+
+          <!-- Category 1: Men's Clothing -->
+          <a href="#trending" class="category-card" id="category-men" aria-label="Explore Men's Clothing">
+            <div class="category-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=600&q=80" 
+                alt="Men wearing trendy casual jacket and shirt"
+                class="category-img"
+                loading="lazy"
+              >
+              <div class="category-overlay">
+                <h3 class="category-name">Men's Clothing</h3>
+                <span class="category-discount">Min. 40% Off</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Category 2: Women's Clothing -->
+          <a href="#trending" class="category-card" id="category-women" aria-label="Explore Women's Clothing">
+            <div class="category-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" 
+                alt="Woman in high-fashion vibrant dress"
+                class="category-img"
+                loading="lazy"
+              >
+              <div class="category-overlay">
+                <h3 class="category-name">Women's Clothing</h3>
+                <span class="category-discount">50 - 70% Off</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Category 3: Kids' Fashion -->
+          <a href="#trending" class="category-card" id="category-kids" aria-label="Explore Kids' Fashion">
+            <div class="category-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?auto=format&fit=crop&w=600&q=80" 
+                alt="Kid wearing modern streetwear and trendy shades"
+                class="category-img"
+                loading="lazy"
+              >
+              <div class="category-overlay">
+                <h3 class="category-name">Kids' Fashion</h3>
+                <span class="category-discount">Up to 60% Off</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Category 4: Footwear -->
+          <a href="#trending" class="category-card" id="category-footwear" aria-label="Explore Footwear">
+            <div class="category-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80" 
+                alt="Assorted branded sneakers and sports shoes"
+                class="category-img"
+                loading="lazy"
+              >
+              <div class="category-overlay">
+                <h3 class="category-name">Footwear</h3>
+                <span class="category-discount">40 - 70% Off</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Category 5: Accessories -->
+          <a href="#trending" class="category-card" id="category-accessories" aria-label="Explore Accessories">
+            <div class="category-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&w=600&q=80" 
+                alt="Luxury watches, sunglasses, and leather belts"
+                class="category-img"
+                loading="lazy"
+              >
+              <div class="category-overlay">
+                <h3 class="category-name">Accessories</h3>
+                <span class="category-discount">Min. 50% Off</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Category 6: Beauty -->
+          <a href="#trending" class="category-card" id="category-beauty" aria-label="Explore Beauty & Grooming">
+            <div class="category-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" 
+                alt="Skincare, makeup, and beauty fragrance bottles"
+                class="category-img"
+                loading="lazy"
+              >
+              <div class="category-overlay">
+                <h3 class="category-name">Beauty</h3>
+                <span class="category-discount">Up to 50% Off</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Promotional Offers Section (Bento Banners)
+         ================================================================== -->
+    <section class="section-wrapper" aria-labelledby="promo-heading" style="background-color: #fafafa;">
+      <div class="container">
+        
+        <header class="section-header">
+          <h2 id="promo-heading" class="section-title">DEALS OF THE DAY</h2>
+          <p class="section-subtitle">Exclusive limited-period seasonal drops curated for trendsetters</p>
+        </header>
+
+        <div class="promo-offers-grid">
+
+          <!-- Banner 1: Flat 50% Off -->
+          <article class="promo-banner-card promo-50off">
+            <span class="promo-badge">Limited Hours</span>
+            <div class="promo-content">
+              <h3>FLAT 50% OFF</h3>
+              <p>Top streetwear labels, denim jackets, oversized hoodies &amp; everyday tees.</p>
+            </div>
+            <a href="#trending" class="promo-link-btn" aria-label="Shop Flat 50% Off Collection">
+              Explore Deals
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Banner 2: New Season Collection -->
+          <article class="promo-banner-card promo-newseason">
+            <span class="promo-badge" style="background-color: #03a685;">Fresh Arrivals</span>
+            <div class="promo-content">
+              <h3>NEW SEASON COLLECTION</h3>
+              <p>International runways, spring-summer palettes &amp; premium designer wardrobes.</p>
+            </div>
+            <a href="#trending" class="promo-link-btn" aria-label="Shop New Season Collection">
+              View Collection
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Banner 3: Festive Fashion Sale -->
+          <article class="promo-banner-card promo-festive">
+            <span class="promo-badge">Celebration Edit</span>
+            <div class="promo-content">
+              <h3>FESTIVE FASHION SALE</h3>
+              <p>Intricate Chikankari, handcrafted silk kurtas, designer lehengas &amp; regal sherwanis.</p>
+            </div>
+            <a href="#trending" class="promo-link-btn" aria-label="Shop Festive Fashion Sale">
+              Discover Ethnic
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Trending Products Section (At least 8 authentic fashion products)
+         ================================================================== -->
+    <section class="section-wrapper" id="trending" aria-labelledby="trending-heading">
+      <div class="container">
+        
+        <header class="section-header">
+          <h2 id="trending-heading" class="section-title">TRENDING NOW</h2>
+          <p class="section-subtitle">Top customer picks with verified quality and irresistible discounts</p>
+        </header>
+
+        <div class="trending-grid">
+
+          <!-- Product 1: Men's Casual Shirt -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80" 
+                alt="Roadster Men's Pure Oxford Cotton Casual Shirt"
+                class="product-img"
+                loading="lazy"
+              >
+              <button class="wishlist-btn" aria-label="Add Men's Casual Shirt to Wishlist" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="rating-pill">
+                <span class="rating-star">★</span> 4.3 
+                <span class="rating-count">2.4k</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-brand">Roadster</h3>
+              <p class="product-title" title="Men Pure Cotton Slim Fit Casual Shirt">Men Pure Cotton Slim Fit Casual Shirt</p>
+              <div class="product-price-row">
+                <span class="current-price">₹799</span>
+                <del class="original-price">₹1,999</del>
+                <span class="discount-tag">(60% OFF)</span>
+              </div>
+              <a href="#product-view" class="view-product-btn" aria-label="View Roadster Men Casual Shirt">VIEW PRODUCT</a>
+            </div>
+          </article>
+
+          <!-- Product 2: Women's Floral Dress -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80" 
+                alt="Anouk Women Vibrant Floral Printed Summer A-Line Dress"
+                class="product-img"
+                loading="lazy"
+              >
+              <button class="wishlist-btn" aria-label="Add Women's Floral Dress to Wishlist" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="rating-pill">
+                <span class="rating-star">★</span> 4.6 
+                <span class="rating-count">4.8k</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-brand">Anouk</h3>
+              <p class="product-title" title="Women Floral Printed Tiered Maxi Dress">Women Floral Printed Tiered Maxi Dress</p>
+              <div class="product-price-row">
+                <span class="current-price">₹1,249</span>
+                <del class="original-price">₹2,999</del>
+                <span class="discount-tag">(58% OFF)</span>
+              </div>
+              <a href="#product-view" class="view-product-btn" aria-label="View Anouk Women Floral Dress">VIEW PRODUCT</a>
+            </div>
+          </article>
+
+          <!-- Product 3: Classic Sneakers -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80" 
+                alt="Puma Unisex Classic Suede Streetwear Sneakers"
+                class="product-img"
+                loading="lazy"
+              >
+              <button class="wishlist-btn" aria-label="Add Classic Sneakers to Wishlist" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="rating-pill">
+                <span class="rating-star">★</span> 4.4 
+                <span class="rating-count">1.9k</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-brand">Puma</h3>
+              <p class="product-title" title="Unisex Classic Low-Top Suede Sneakers">Unisex Classic Low-Top Suede Sneakers</p>
+              <div class="product-price-row">
+                <span class="current-price">₹2,399</span>
+                <del class="original-price">₹4,999</del>
+                <span class="discount-tag">(52% OFF)</span>
+              </div>
+              <a href="#product-view" class="view-product-btn" aria-label="View Puma Classic Sneakers">VIEW PRODUCT</a>
+            </div>
+          </article>
+
+          <!-- Product 4: Denim Jeans -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=600&q=80" 
+                alt="Levi's Men 511 Slim Fit Stretch Denim Jeans"
+                class="product-img"
+                loading="lazy"
+              >
+              <button class="wishlist-btn" aria-label="Add Denim Jeans to Wishlist" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="rating-pill">
+                <span class="rating-star">★</span> 4.5 
+                <span class="rating-count">3.2k</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-brand">Levi's</h3>
+              <p class="product-title" title="Men 511 Slim Fit Light Fade Stretch Jeans">Men 511 Slim Fit Light Fade Stretch Jeans</p>
+              <div class="product-price-row">
+                <span class="current-price">₹1,899</span>
+                <del class="original-price">₹3,799</del>
+                <span class="discount-tag">(50% OFF)</span>
+              </div>
+              <a href="#product-view" class="view-product-btn" aria-label="View Levi's Denim Jeans">VIEW PRODUCT</a>
+            </div>
+          </article>
+
+          <!-- Product 5: Stylish Handbag -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=600&q=80" 
+                alt="Mango Women Structured Saffiano Vegan Leather Handbag"
+                class="product-img"
+                loading="lazy"
+              >
+              <button class="wishlist-btn" aria-label="Add Stylish Handbag to Wishlist" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="rating-pill">
+                <span class="rating-star">★</span> 4.7 
+                <span class="rating-count">890</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-brand">Mango</h3>
+              <p class="product-title" title="Structured Saffiano Texture Vegan Leather Handbag">Structured Saffiano Texture Vegan Handbag</p>
+              <div class="product-price-row">
+                <span class="current-price">₹2,190</span>
+                <del class="original-price">₹4,590</del>
+                <span class="discount-tag">(52% OFF)</span>
+              </div>
+              <a href="#product-view" class="view-product-btn" aria-label="View Mango Handbag">VIEW PRODUCT</a>
+            </div>
+          </article>
+
+          <!-- Product 6: Sports T-Shirt -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&w=600&q=80" 
+                alt="HRX by Hrithik Roshan Active Rapid-Dry Sports T-Shirt"
+                class="product-img"
+                loading="lazy"
+              >
+              <button class="wishlist-btn" aria-label="Add Sports T-Shirt to Wishlist" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="rating-pill">
+                <span class="rating-star">★</span> 4.2 
+                <span class="rating-count">5.1k</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-brand">HRX by Hrithik</h3>
+              <p class="product-title" title="Men Rapid-Dry Breathable Training T-Shirt">Men Rapid-Dry Breathable Training T-Shirt</p>
+              <div class="product-price-row">
+                <span class="current-price">₹599</span>
+                <del class="original-price">₹1,499</del>
+                <span class="discount-tag">(60% OFF)</span>
+              </div>
+              <a href="#product-view" class="view-product-btn" aria-label="View HRX Sports T-Shirt">VIEW PRODUCT</a>
+            </div>
+          </article>
+
+          <!-- Product 7: Ethnic Kurta -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80" 
+                alt="FabIndia Handcrafted Silk Blend Festive Kurta"
+                class="product-img"
+                loading="lazy"
+              >
+              <button class="wishlist-btn" aria-label="Add Ethnic Kurta to Wishlist" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="rating-pill">
+                <span class="rating-star">★</span> 4.6 
+                <span class="rating-count">1.4k</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-brand">FabIndia</h3>
+              <p class="product-title" title="Handcrafted Silk Blend Straight Festive Kurta">Handcrafted Silk Blend Straight Festive Kurta</p>
+              <div class="product-price-row">
+                <span class="current-price">₹1,699</span>
+                <del class="original-price">₹3,499</del>
+                <span class="discount-tag">(51% OFF)</span>
+              </div>
+              <a href="#product-view" class="view-product-btn" aria-label="View FabIndia Ethnic Kurta">VIEW PRODUCT</a>
+            </div>
+          </article>
+
+          <!-- Product 8: Fashion Watch -->
+          <article class="product-card">
+            <div class="product-img-box">
+              <img 
+                src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=600&q=80" 
+                alt="Fossil Men Minimalist Chronograph Brown Leather Watch"
+                class="product-img"
+                loading="lazy"
+              >
+              <button class="wishlist-btn" aria-label="Add Fashion Watch to Wishlist" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="rating-pill">
+                <span class="rating-star">★</span> 4.8 
+                <span class="rating-count">940</span>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-brand">Fossil</h3>
+              <p class="product-title" title="Men Minimalist Chronograph Leather Dial Watch">Men Minimalist Chronograph Leather Dial Watch</p>
+              <div class="product-price-row">
+                <span class="current-price">₹4,495</span>
+                <del class="original-price">₹8,995</del>
+                <span class="discount-tag">(50% OFF)</span>
+              </div>
+              <a href="#product-view" class="view-product-btn" aria-label="View Fossil Watch">VIEW PRODUCT</a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Shopping Benefits Section
+         ================================================================== -->
+    <section class="benefits-section" aria-labelledby="benefits-heading">
+      <div class="container">
+        <h2 id="benefits-heading" class="visually-hidden" style="position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0,0,0,0);">Shopping Benefits</h2>
+        
+        <div class="benefits-grid">
+
+          <!-- Benefit 1 -->
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <!-- Express Shipping Truck Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="benefit-info">
+              <h4>Free Express Shipping</h4>
+              <p>On all eligible prepaid orders across India</p>
+            </div>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <!-- Easy Returns Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+            </div>
+            <div class="benefit-info">
+              <h4>Easy 14-Day Returns</h4>
+              <p>Hassle-free doorstep pickup &amp; instant refund</p>
+            </div>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <!-- Secure Payment Shield Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 12 11 14 15 10"></polyline>
+              </svg>
+            </div>
+            <div class="benefit-info">
+              <h4>100% Secure Payments</h4>
+              <p>Bank-grade 256-bit SSL encrypted checkout</p>
+            </div>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <!-- Authentic Original Brand Badge Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+              </svg>
+            </div>
+            <div class="benefit-info">
+              <h4>100% Original Products</h4>
+              <p>Sourced directly from verified top brands</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       4. Professional Footer Landmark
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-columns">
+
+        <!-- Column 1: ONLINE SHOPPING -->
+        <div class="footer-col">
+          <h3>ONLINE SHOPPING</h3>
+          <ul class="footer-links">
+            <li><a href="#category-men">Men</a></li>
+            <li><a href="#category-women">Women</a></li>
+            <li><a href="#category-kids">Kids</a></li>
+            <li><a href="#trending">Home &amp; Living</a></li>
+            <li><a href="#category-beauty">Beauty</a></li>
+            <li><a href="#offers">Gift Cards</a></li>
+            <li><a href="#offers">Myntra Insider</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: CUSTOMER POLICIES -->
+        <div class="footer-col">
+          <h3>CUSTOMER POLICIES</h3>
+          <ul class="footer-links">
+            <li><a href="#footer-policies">Contact Us</a></li>
+            <li><a href="#footer-policies">FAQ</a></li>
+            <li><a href="#footer-policies">Terms of Use</a></li>
+            <li><a href="#footer-policies">Track Orders</a></li>
+            <li><a href="#footer-policies">Shipping</a></li>
+            <li><a href="#footer-policies">Cancellation</a></li>
+            <li><a href="#footer-policies">Returns</a></li>
+            <li><a href="#footer-policies">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: USEFUL LINKS -->
+        <div class="footer-col">
+          <h3>USEFUL LINKS</h3>
+          <ul class="footer-links">
+            <li><a href="#footer-links">Blog</a></li>
+            <li><a href="#footer-links">Careers</a></li>
+            <li><a href="#footer-links">Site Map</a></li>
+            <li><a href="#footer-links">Corporate Information</a></li>
+            <li><a href="#footer-links">Whitehat</a></li>
+            <li><a href="#footer-links">Cleartrip</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: CONNECT WITH US & SOCIALS -->
+        <div class="footer-col">
+          <h3>CONNECT WITH US</h3>
+          <p style="font-size: 0.85rem; color: #535766; margin-bottom: 12px;">Stay in sync with our daily drops &amp; flash sales:</p>
+          
+          <div class="social-icons" aria-label="Social Media Links">
+            <!-- Instagram -->
+            <a href="https://instagram.com" class="social-link" title="Follow us on Instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://facebook.com" class="social-link" title="Follow us on Facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com" class="social-link" title="Subscribe to our YouTube" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+
+            <!-- Twitter / X -->
+            <a href="https://twitter.com" class="social-link" title="Follow us on Twitter" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="guarantee-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+            <span><strong>100% ORIGINAL</strong> guarantee for all products at myntra.com</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright & Educational Disclaimer -->
+      <div class="footer-bottom">
+        <p class="copyright-text">© 2026 www.myntra.com. All rights reserved.</p>
+        <p class="clone-disclaimer">
+          <strong>Educational Project Disclaimer:</strong> This website is an educational frontend clone created strictly for portfolio demonstration and skill demonstration purposes. It is not affiliated with, authorized, or endorsed by Myntra Designs Pvt. Ltd. or Flipkart Group. All brand names, trademarks, and imagery belong to their respective copyright holders.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
