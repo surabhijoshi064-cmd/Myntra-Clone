@@ -1,9 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap');
 
-/* --------------------------------------------------------------------------
-   1. CSS Custom Properties / Design Tokens
-   -------------------------------------------------------------------------- */
 :root {
   /* Brand Colors */
   --primary: #ff3f6c;
@@ -650,19 +647,16 @@ input:focus-visible {
 }
 
 .category-card {
-  position: relative;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  background-color: var(--bg-card);
-  transition: all var(--transition-norm);
   display: block;
-  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
 }
 
 .category-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
 }
 
 .category-img-box {
@@ -825,20 +819,18 @@ input:focus-visible {
 }
 
 .product-card {
-  position: relative;
-  background-color: var(--bg-card);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-light);
+  background: #fff;
+  border: 1px solid #eaeaec;
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: all var(--transition-norm);
+  transition: 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: #dedede;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* Product Image Box */
@@ -985,23 +977,20 @@ input:focus-visible {
 .view-product-btn {
   display: block;
   width: 100%;
+  padding: 10px;
   text-align: center;
-  padding: 10px 0;
-  font-size: 0.84rem;
-  font-weight: 800;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  color: var(--primary);
-  background-color: var(--primary-light);
-  border: 1px solid rgba(255, 63, 108, 0.3);
-  border-radius: var(--radius-xs);
-  transition: all var(--transition-fast);
+  background: #fff0f4;
+  color: #ff3f6c;
+  border: 1px solid #ff3f6c;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s ease;
 }
 
-.product-card:hover .view-product-btn {
-  background-color: var(--primary);
-  color: var(--text-white);
-  border-color: var(--primary);
+.view-product-btn:hover {
+  background: #ff3f6c;
+  color: white;
 }
 
 /* --------------------------------------------------------------------------
@@ -1325,14 +1314,12 @@ input:focus-visible {
     padding: 6px 12px;
   }
 
+/* Accessibility: Reduce animations */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  * {
     scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    animation: none !important;
+    transition: none !important;
   }
 }
 
@@ -1360,14 +1347,16 @@ input:focus-visible {
   }
 
   .search-wrapper {
-    min-width: 140px;
-  }
+  min-width: 120px;
+  flex: 1;
+}
 
-  .search-input {
-    font-size: 0.8rem;
-    height: 38px;
-    padding-left: 36px;
-  }
+.search-input {
+  width: 100%;
+  height: 38px;
+  padding-left: 36px;
+  font-size: 13px;
+}
 
   .search-icon {
     width: 15px;
